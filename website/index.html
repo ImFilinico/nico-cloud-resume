@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+
+<header>
+    <h1>Nicolas Gerard R. Mangilit</h1>
+    <p>Welcome!</p>
+    <div class ="counter-number"></div>
+</header>
+
+<!-- Collapsible Navbar Section -->
+<button class="collapsible-navbar" onclick="toggleNavbar()">Menu</button>
+<div class="navbar navbar-content" id="navbar">
+    <a href="#bio">Bio</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#skills">Skills</a>
+    <a href="#interests">Interests</a>
+</div>
+
+<div class="content">
+    <!-- Bio Section -->
+    <section id="bio" class="bio-section">
+        <div class = "Container">
+            <h2>Bio</h2>
+            <img src="me.jpg" alt="Your Name">
+            <div class="text"><p>Hello there! My name is Nicolas Mangilit. I have experience in full stack development and am interested in cloud architecture and computing! As of right now, I am studying for my AWS Certified Solution Architect Associate certification.</p></div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <h2>Education</h2>
+            <img src="uh.png" class="school">
+            <p></p><u>University of Houston: August 2022 - May 2026</u>
+            <p>BS in Computer Science, Minor in Mathematics</p>
+            <p>GPA:3.662</p>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="cert-section">
+        <h2>Certifications</h2>
+        <p><u>AWS Certified Cloud Practioner</u></p>
+        <img src="AWS-Practioner.png" alt="aws cert">
+        <p>This certification shows that I have grasped the basics of:</p>
+        <ul class="cert-list">
+            <li>Cloud Architecture</li>
+            <li>Good Cloud Practices</li>
+            <li>Core AWS services</li>
+        </ul>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <section class="skills">
+            <h2>Skills</h2>
+            
+            <div class="skills-container">
+              <div class="skills-box">
+                <h3>Programming Languages</h3>
+                <ul>
+                  <li>HTML/CSS</li>
+                  <li>JavaScript</li>
+                  <li>Python</li>
+                  <li>C++</li>
+                  <li>SQL</li>
+                  <li>MongoDB</li>
+                  <li>R</li>
+                </ul>
+              </div>
+              
+              <div class="skills-box">
+                <h3>Libraries/Frameworks</h3>
+                <ul>
+                  <li>NumPy</li>
+                  <li>Pandas</li>
+                  <li>Matplotlib</li>
+                  <li>React</li>
+                </ul>
+              </div>
+              
+              <div class="skills-box">
+                <h3>Developer & Design Tools</h3>
+                <ul>
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>VSCode</li>
+                  <li>AWS</li>
+                  <li>RStudio</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="interest-section">
+        <h2>Other Interests</h2>
+        <p><u>Powerlifting</u></p>
+        <p>I really enjoy my time in the gym as a stress reliever and like to lift heavy weights! I actually am a brand ambassador for <a href="https://tgifitness.net/?sca_ref=6476147.zrjEk8PPLJx">TGIFitness</a>! If you want to follow my lifting journey, follow my <a href="https://www.instagram.com/nico_mangolift/profilecard/?igsh=MTZwMDAzcHZocjdhYQ==">Insta!</a></p>
+        <p><u>Pickleball</u></p>
+        <p>This is my favorite form of cardio and I'm in the pickleball club at UH!</p>
+    </section>
+</div>
+
+<script>
+    function toggleNavbar() {
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("open");
+
+        var button = document.querySelector(".collapsible-navbar");
+        button.classList.toggle("active");
+    }
+</script>
+
+  <script src="./index.js"></script>
+</body>
+</html>

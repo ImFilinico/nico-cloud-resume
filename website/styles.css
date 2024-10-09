@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: beige;
+}
+
+header {
+    background-color: #db4f4f;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #444;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.content {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.bio-section img {
+    max-width: 200px;
+    float: right;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-left: 20px;
+}
+
+.bio-section p {
+    font-size: 20px;
+}
+
+.bio-section h2{
+    font-size: 2.5em;
+    color:  #db4f4f;
+}
+
+.education-section img{
+    float:left;
+    max-width: 110px;
+    margin-right:30px;
+}
+
+.education-section h2{
+    font-size: 2.5em;
+    color:  #db4f4f;
+}
+
+.cert-section img{
+    max-width: 150px;
+    float: left;
+    margin-right: 30px;
+}
+
+.cert-section h2{
+    font-size: 2.5em;
+    color:  #db4f4f;
+}
+  
+  .skills {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .skills h2 {
+    font-size: 2.5em;
+    color:  #db4f4f;
+  }
+  
+  .skills-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .skills-box {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .skills-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skills-box h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+    border-left: 4px solid  #db4f4f;
+    padding-left: 10px;
+  }
+  
+  .skills-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills-box li {
+    background-color:  #db4f4f;
+    color: beige;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .skills-box li:hover {
+    background-color:  #db4f4f;
+  }
+  
+.interest-section h2{
+    font-size: 2.5em;
+    color:  #db4f4f;    
+}
+.collapsible-navbar {
+    background-color: #222222;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.collapsible-navbar.active {
+    background-color: #555;
+}
+
+.navbar-content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.navbar.open {
+    max-height: 300px; /* Adjust this based on the number of nav items */
+}
+
+

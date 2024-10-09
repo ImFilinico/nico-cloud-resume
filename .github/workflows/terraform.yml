@@ -1,0 +1,56 @@
+name: Terraform CI/CD Pipeline
+
+on:
+  # Trigger the workflow when pushing to main branch or opening a pull request
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Terraform
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.5.0  # specify the required version
+
+      # Step 3: Install AWS CLI (or other cloud provider tools)
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get install awscli -y
+          aws --version
+
+      # Step 4: Configure AWS credentials
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      # Step 5: Initialize Terraform
+      - name: Terraform Init
+        run: terraform init
+        working-directory: ./terraform  # relative path to your Terraform directory
+
+      # Step 6: Terraform Plan
+      - name: Terraform Plan
+        id: plan
+        run: terraform plan -out=tfplan
+        working-directory: ./terraform
+
+      # Step 7: Apply Terraform (only on push to main)
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/main'
+        run: terraform apply -auto-approve tfplan
+        working-directory: ./terraform
