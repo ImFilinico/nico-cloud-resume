@@ -165,4 +165,18 @@ header {
     max-height: 300px; /* Adjust this based on the number of nav items */
 }
 
+.container {
+  text-align: center;
+}
+
+.container img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto;
+}
+
+.text {
+  margin-top: 20px; /* Adds some space between the image and text */
+}
 
