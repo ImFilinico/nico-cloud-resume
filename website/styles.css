@@ -185,3 +185,15 @@ header {
   background-color: #e9dede; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
+.education-section h2{
+  text-align:center;
+}
+
+.cert-section h2{
+  text-align :center;
+}
+
+.interest-section h2{
+  text-align:center;
+}
