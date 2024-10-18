@@ -40,13 +40,6 @@ header {
     margin-bottom: 50px;
 }
 
-.bio-section img {
-    max-width: 200px;
-    float: right;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin-left: 20px;
-}
 
 .bio-section p {
     font-size: 20px;
@@ -171,9 +164,12 @@ header {
 
 .container img {
   display: block;
-  margin: 0 auto;
-  max-width: 100%; /* Ensures the image is responsive */
-  height: auto;
+  max-width: 200px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-left: auto;
+  margin-right: auto;
+  float: middle;
 }
 
 .text {
