@@ -224,3 +224,19 @@ header {
 .interest-section h2{
   text-align:center;
 }
+
+.interest-section {
+  width: 80%; 
+  margin: 0 auto; 
+  text-align: center; 
+}
+
+.interest-container {
+  margin-bottom: 20px; 
+  padding: 20px;
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
+  background-color: #f9f9f9; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  width: 80%;
+}
